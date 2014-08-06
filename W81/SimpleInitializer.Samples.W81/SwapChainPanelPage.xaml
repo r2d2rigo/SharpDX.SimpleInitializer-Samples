@@ -1,0 +1,31 @@
+﻿<Page
+    x:Class="SimpleInitializer.Samples.W81.SwapChainPanelPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SimpleInitializer.Samples.W81"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="140" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="BackButton" Content="&#xE071;" FontFamily="Segoe UI Symbol" FontSize="56" VerticalAlignment="Center" HorizontalAlignment="Center" BorderThickness="0" Click="BackButton_Click"/>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="SimpleInitializer.Samples.W81" VerticalAlignment="Center" Grid.Column="1" Margin="48,0,0,0" FontFamily="Segoe UI" FontSize="48"/>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <SwapChainPanel x:Name="SwapChainPanel" Width="500" Height="500"/>
+        </Grid>
+    </Grid>
+
+</Page>
